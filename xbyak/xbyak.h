@@ -105,7 +105,7 @@ namespace Xbyak {
 
 enum {
 	DEFAULT_MAX_CODE_SIZE = 4096,
-	VERSION = 0x5420 /* 0xABCD = A.BC(D) */
+	VERSION = 0x5430 /* 0xABCD = A.BC(D) */
 };
 
 #ifndef MIE_INTEGER_TYPE_DEFINED
@@ -2372,6 +2372,9 @@ public:
 	}
 #endif
 
+#ifdef XBYAK_UNDEF_JNL
+	#undef jnl
+#endif
 #ifndef XBYAK_DONT_READ_LIST
 #include "xbyak_mnemonic.h"
 	void align(int x = 16)
