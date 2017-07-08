@@ -1,6 +1,5 @@
 
-Xbyak 5.42 ; JIT assembler for x86(IA32), x64(AMD64, x86-64) by C++
-=============
+Xbyak 5.431 ; JIT assembler for x86(IA32), x64(AMD64, x86-64) by C++
 
 Abstract
 -------------
@@ -332,6 +331,8 @@ The header files under xbyak/ are independent of cybozulib.
 
 History
 -------------
+* 2017/Jul/09 ver 5.431 fix hasRex() (no affect) (thanks to drillsar)
+* 2017/May/14 ver 5.43 fix CodeGenerator::resetSize() (thanks to gibbed)
 * 2017/May/13 ver 5.42 add movs{b,w,d,q}
 * 2017/Jan/26 ver 5.41 add prefetchwt1 and support for scale == 0(thanks to rsdubtso)
 * 2016/Dec/14 ver 5.40 add Label::getAddress() method to get the pointer specified by the label
