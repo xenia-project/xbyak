@@ -1,5 +1,5 @@
 
-Xbyak 5.42 ; JIT assembler for x86(IA32), x64(AMD64, x86-64) by C++
+Xbyak 5.432 ; JIT assembler for x86(IA32), x64(AMD64, x86-64) by C++
 =============
 
 Abstract
@@ -311,6 +311,7 @@ Macro
 * **XBYAK64_GCC** is defined on 64bit gcc, cygwin
 * define **XBYAK_NO_OP_NAMES** on gcc without `-fno-operator-names`
 * define **XBYAK_ENABLE_OMITTED_OPERAND** if you use omitted destination such as `vaddps(xmm2, xmm3);`(duplicated in the future)
+* define **XBYAK_UNDEF_JNL** if Bessel function jnl is defined as macro
 
 Sample
 -------------
@@ -332,6 +333,9 @@ The header files under xbyak/ are independent of cybozulib.
 
 History
 -------------
+* 2017/Jul/12 ver 5.432 reduce warnings of PVS studio
+* 2017/Jul/09 ver 5.431 fix hasRex() (no affect) (thanks to drillsar)
+* 2017/May/14 ver 5.43 fix CodeGenerator::resetSize() (thanks to gibbed)
 * 2017/May/13 ver 5.42 add movs{b,w,d,q}
 * 2017/Jan/26 ver 5.41 add prefetchwt1 and support for scale == 0(thanks to rsdubtso)
 * 2016/Dec/14 ver 5.40 add Label::getAddress() method to get the pointer specified by the label
